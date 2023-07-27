@@ -43,13 +43,8 @@ const ContactUI = ({
     
     // Send a post request with input values
     try {
-<<<<<<< HEAD
-      const response = await axios.post('/api/contacts', { name, email, message });
-=======
       const response = await axios.post('process.env.REACT_APP_SERVER_URL/api/contacts', { name, email, message });
->>>>>>> 1332809db39b4ba095bb3cfc185b967536771727
       const data = response.data;
-      
       // Set success state and snackbar message
       setSuccess(true);
       setErrMsg('Your message has been sent successfully!');
