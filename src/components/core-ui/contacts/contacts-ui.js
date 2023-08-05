@@ -43,7 +43,7 @@ const ContactUI = ({
     // ${process.env.REACT_APP_SERVER_URL}
     // Send a post request with input values
     try {
-      const response = await axios.post(`http://localhost:5000/api/contacts`, { name, email, message });
+      const response = await axios.post(`https://miretu-jaletac.onrender.com//api/contacts`, { name, email, message });
       const data = response.data;
       // Set success state and snackbar message
       setSuccess(true);
