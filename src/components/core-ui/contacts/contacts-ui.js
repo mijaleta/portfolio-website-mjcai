@@ -1,7 +1,14 @@
 import { IconButton, Snackbar, SnackbarContent } from "@mui/material";
 import React, { useContext } from "react";
 import { AiOutlineCheckCircle, AiOutlineSend } from "react-icons/ai";
-import axios from 'axios'; // Import axios
+import axios from 'axios'; 
+import { FiAtSign, FiPhone } from "react-icons/fi";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
+import { ThemeContext } from "../../../contexts/theme-context";
+import { contactsData } from "../../../data/contactsData";
+// import dotenv from 'dotenv';
+
 import {
   FaFacebook,
   FaGithub,
@@ -11,20 +18,11 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import { FiAtSign, FiPhone } from "react-icons/fi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { IoClose } from "react-icons/io5";
-import { ThemeContext } from "../../../contexts/theme-context";
-import { contactsData } from "../../../data/contactsData";
 import "./contacts.css";
-
+// require('dotenv').config()
 const ContactUI = ({
-  // open,
-  // success,
-  // errMsg,
   handleClose,
   classes,
-  // handleContactForm,
   name,
   setName,
   form,
@@ -33,6 +31,7 @@ const ContactUI = ({
   message,
   setMessage,
 }) => {
+   
   const [success, setSuccess] = React.useState(false);
   const [errMsg, setErrMsg] = React.useState('');
   const [open, setOpen] = React.useState(false);
@@ -40,34 +39,30 @@ const ContactUI = ({
 
   const handleContactForm = async (e) => {
     e.preventDefault();
-    
+    // http://localhost:5000
+    // ${process.env.REACT_APP_SERVER_URL}
     // Send a post request with input values
     try {
-      const response = await axios.post(`https://miretu-jaletac.onrender.com/api/contacts`, { name, email, message });
+      const response = await axios.post(`http://localhost:5000/api/contacts`, { name, email, message });
       const data = response.data;
       // Set success state and snackbar message
       setSuccess(true);
       setErrMsg('Your message has been sent successfully!');
-      
       // Reset input values
       setName('');
       setEmail('');
       setMessage('');
-      
       // Open snackbar
       setOpen(true);
-      
     } catch (err) {
       // Set error state and snackbar message
       setSuccess(false);
       // Check if err.response exists before accessing its data property
       setErrMsg(err.response ? err.response.data.error : 'Something went wrong!');
-      
       // Open snackbar
       setOpen(true);
     }
   };
-
   return (
     <div
       className="contacts"
