@@ -5,19 +5,14 @@ import eduImgBlack from '../../../assets/svg/education/eduImgBlack.svg';
 import eduImgWhite from '../../../assets/svg/education/eduImgWhite.svg';
 import { ThemeContext } from '../../../contexts/theme-context';
 import './education.css';
-
 function EducationCard({ id, institution, course, startYear, endYear }) {
-
     const { theme } = useContext(ThemeContext);
-
     const useStyles = makeStyles((t) => ({
         educationCard: {
             backgroundColor: theme.quaternary,
         },
     }));
-
     const classes = useStyles();
-
     return (
         <Fade bottom>
             <div key={id} className={`education-card ${classes.educationCard}`} >
@@ -33,5 +28,4 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
         </Fade>
     )
 }
-
 export default EducationCard

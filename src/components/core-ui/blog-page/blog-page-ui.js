@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 import { headerData } from '../../../data/headerData';
 import BlogCard from '../blog/blog-card/blog-card';
 import './blog.css';
+
 const BlogPageUI = ({ theme, classes, filteredArticles, setSearch, search }) => {
+
   return (
     <div
       className="blogPage"
@@ -20,7 +22,7 @@ const BlogPageUI = ({ theme, classes, filteredArticles, setSearch, search }) => 
         <Link to="/">
           <AiOutlineHome className={classes.home} />
         </Link>
-        <h1 style={{ color: theme.primary }}>Blogs</h1>
+        <h1 style={{ color: theme.secondary }}>Blogs</h1>
       </div>
       <div className="blogPage--container">
         <div className="blog--search">
