@@ -22,3 +22,10 @@ export const theDarkTheme = {
     buttonColor: '#8B98A5',
     contactsimg: contactsImage
 }
+
+
+
+
+
+
+

@@ -4,7 +4,6 @@ import React, { useContext, useState } from 'react';
 import ProjectPageUI from '../../components/core-ui/project-page/project-page-ui';
 import { ThemeContext } from '../../contexts/theme-context';
 import { projectsData } from '../../data/projectsData';
-
 function ProjectPage() {
     const [search, setSearch] = useState('')
     const { theme } = useContext(ThemeContext);

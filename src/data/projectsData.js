@@ -1,11 +1,11 @@
-import eight from '../assets/svg/projects/eight.svg'
-import seven from '../assets/svg/projects/seven.svg'
-import six from '../assets/svg/projects/six.svg'
+import eight from '../assets/svg/projects/brr22.png'
+import seven from '../assets/svg/projects/brr33.png'
+import six from '../assets/svg/projects/brr11.png'
 // import duna from '../assets/svg/projects/duna svg.svg'
 export const projectsData = [
     {
         id: 1,
-        projectName: 'online bus ticket booking',
+        projectName: 'online bus ticket ',
         projectDesc: 'Booking the ticket for bus .',
         tags: [ 'SAAS', 'React Bootstrap'],
         code: '',
