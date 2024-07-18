@@ -5,7 +5,7 @@ export const headerData = {
     desciption: "Hello! I am Miretu Jaleta, a professional and passionate programmer in my daily life. A quick learner with a self-learning attitude. I love to learn and explore new technologies and am Passionate about Problem Solving. ",
     // image: 'https://i.ibb.co/7bnmm3h/m12.png',
     
-    image: 'https://ibb.co/5LfCswy',
+    image: 'https://ibb.co/7jQxHLT',
     image2: 'https://i.ibb.co/Xb1p0SR/mpp.jpg',
 
     imagebw: 'https://i.ibb.co/7bnmm3h/m12.png',
