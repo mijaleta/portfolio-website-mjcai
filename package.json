@@ -2,7 +2,9 @@
   "name": "developer-portfolio-v2",
   "version": "0.1.0",
   "private": true,
+  
   "dependencies": {
+    
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -34,12 +36,13 @@
     "validator": "^13.7.0",
     "web-vitals": "^2.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+"scripts": {
+  "start": "react-scripts --openssl-legacy-provider start --port 5173",
+  "dev": "react-scripts --openssl-legacy-provider start --port 5173",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
